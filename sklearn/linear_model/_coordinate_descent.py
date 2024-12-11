@@ -2346,6 +2346,7 @@ class ElasticNetCV(RegressorMixin, LinearModelCV):
         tol=1e-4,
         cv=None,
         copy_X=True,
+        refit=True,
         verbose=0,
         n_jobs=None,
         positive=False,
@@ -2362,6 +2363,7 @@ class ElasticNetCV(RegressorMixin, LinearModelCV):
         self.tol = tol
         self.cv = cv
         self.copy_X = copy_X
+        self.refit = refit
         self.verbose = verbose
         self.n_jobs = n_jobs
         self.positive = positive
@@ -3018,6 +3020,7 @@ class MultiTaskElasticNetCV(RegressorMixin, LinearModelCV):
         tol=1e-4,
         cv=None,
         copy_X=True,
+        refit=True,
         verbose=0,
         n_jobs=None,
         random_state=None,
@@ -3032,6 +3035,7 @@ class MultiTaskElasticNetCV(RegressorMixin, LinearModelCV):
         self.tol = tol
         self.cv = cv
         self.copy_X = copy_X
+        self.refit = refit
         self.verbose = verbose
         self.n_jobs = n_jobs
         self.random_state = random_state
